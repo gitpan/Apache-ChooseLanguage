@@ -4,8 +4,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'Apache::ChooseLanguage',
     'VERSION_FROM'	=> 'ChooseLanguage.pm',
-    'PREREQ_PM'		=> {},
-    ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM => 'ChooseLanguage.pm',
-       AUTHOR     => 'Billy Nadeau <bill@sanac.net') : ()),
+    'ABSTRACT'		=> 'Apache mod_perl handler to manage sites available in many languages',
+    'AUTHOR'		=> 'Billy Nadeau <bill@sanac.net>',
+    'PREREQ_PM'		=> { "mod_perl" => 1.0,
+			     "CGI::Cookie" => 0 }
 );
